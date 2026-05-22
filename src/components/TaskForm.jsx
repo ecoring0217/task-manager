@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { supabase } from '../lib/supabase'
+import { supabase, SECTION } from '../lib/supabase'
 
 const EMPTY = {
   title: '',
@@ -56,6 +56,7 @@ export default function TaskForm({ task, members, onSave, onClose }) {
       priority: form.priority,
       status: form.status,
       notes: form.notes.trim() || null,
+      section_name: SECTION,
     }
 
     const { error: dbError } = task

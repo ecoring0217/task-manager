@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { supabase } from '../lib/supabase'
+import { supabase, SECTION } from '../lib/supabase'
 
 export default function MembersPage({ members, onMembersChange }) {
   const [newName, setNewName] = useState('')
@@ -16,7 +16,7 @@ export default function MembersPage({ members, onMembersChange }) {
     }
     setAdding(true)
     setError('')
-    const { error: dbError } = await supabase.from('members').insert({ name })
+    const { error: dbError } = await supabase.from('members').insert({ name, section_name: SECTION })
     setAdding(false)
     if (dbError) {
       setError('追加に失敗しました')

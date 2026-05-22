@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react'
-import { supabase } from './lib/supabase'
+import { supabase, SECTION } from './lib/supabase'
 import Header from './components/Header'
 import TaskBoard from './pages/TaskBoard'
 import MembersPage from './pages/MembersPage'
@@ -19,6 +19,7 @@ export default function App() {
         assignee:assignee_id(id, name),
         requester:requester_id(id, name)
       `)
+      .eq('section_name', SECTION)
       .order('created_at', { ascending: false })
     if (data) setTasks(data)
   }, [])
@@ -27,6 +28,7 @@ export default function App() {
     const { data } = await supabase
       .from('members')
       .select('*')
+      .eq('section_name', SECTION)
       .order('name')
     if (data) setMembers(data)
   }, [])
