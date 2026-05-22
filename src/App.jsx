@@ -3,6 +3,7 @@ import { supabase } from './lib/supabase'
 import Header from './components/Header'
 import TaskBoard from './pages/TaskBoard'
 import MembersPage from './pages/MembersPage'
+import HelpPage from './pages/HelpPage'
 
 export default function App() {
   const [page, setPage] = useState('tasks')
@@ -50,8 +51,10 @@ export default function App() {
           <div className="loading">読み込み中...</div>
         ) : page === 'tasks' ? (
           <TaskBoard tasks={tasks} members={members} onTaskChange={fetchTasks} />
-        ) : (
+        ) : page === 'members' ? (
           <MembersPage members={members} onMembersChange={fetchMembers} />
+        ) : (
+          <HelpPage />
         )}
       </main>
     </div>

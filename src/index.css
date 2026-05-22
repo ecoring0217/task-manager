@@ -510,3 +510,248 @@ ul { list-style: none; }
   padding: 32px; text-align: center;
   color: var(--text-sub); font-size: 14px; line-height: 1.8;
 }
+
+/* ===========================
+   Help Page
+   =========================== */
+.help-page {
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.help-header {
+  margin-bottom: 4px;
+}
+.help-header h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+.help-subtitle {
+  font-size: 14px;
+  color: var(--text-sub);
+}
+
+.help-section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+}
+
+.help-section-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg);
+}
+
+.help-step-badge {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--brand);
+  background: var(--brand-bg);
+  border: 1px solid var(--brand-light);
+  padding: 2px 6px;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+}
+
+/* Steps */
+.help-steps {
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.help-step {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.step-number {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--brand);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.step-content { flex: 1; }
+.step-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+.step-desc {
+  font-size: 13px;
+  color: var(--text-sub);
+  line-height: 1.6;
+}
+
+/* Table */
+.help-table { padding: 0; }
+.help-row {
+  display: grid;
+  grid-template-columns: 100px 1fr 56px;
+  gap: 12px;
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--border-light);
+  align-items: center;
+}
+.help-row:last-child { border-bottom: none; }
+.help-row.header-row {
+  background: var(--bg);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-hint);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 8px 20px;
+}
+.help-col-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+}
+.help-col-desc {
+  font-size: 13px;
+  color: var(--text-sub);
+  line-height: 1.5;
+}
+.help-col-req { text-align: center; }
+
+.badge-required {
+  display: inline-block;
+  padding: 2px 7px;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 600;
+  background: var(--ph-bg);
+  color: var(--ph-text);
+  border: 1px solid var(--ph-border);
+}
+.badge-optional {
+  display: inline-block;
+  padding: 2px 7px;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 600;
+  background: var(--st-bg);
+  color: var(--st-text);
+  border: 1px solid var(--st-border);
+}
+
+/* Badges grid */
+.help-badges-grid {
+  padding: 16px 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+@media (max-width: 600px) {
+  .help-badges-grid { grid-template-columns: 1fr; }
+}
+.help-badge-group {}
+.help-badge-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-hint);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 10px;
+}
+.help-badge-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.help-badge-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.help-badge-note {
+  font-size: 13px;
+  color: var(--text-sub);
+}
+
+/* Tips */
+.help-tips {
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.help-tip {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-light);
+}
+.help-tip:last-child { border-bottom: none; }
+.tip-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+  width: 28px;
+  text-align: center;
+}
+.tip-content { flex: 1; }
+.tip-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 3px;
+}
+.tip-desc {
+  font-size: 13px;
+  color: var(--text-sub);
+  line-height: 1.6;
+}
+
+/* Order */
+.help-order {
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.help-order-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--text-sub);
+}
+.order-num {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--brand-bg);
+  color: var(--brand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  flex-shrink: 0;
+  border: 1px solid var(--brand-light);
+}

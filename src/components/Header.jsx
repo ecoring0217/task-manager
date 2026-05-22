@@ -22,6 +22,12 @@ export default function Header({ page, onNavigate }) {
           >
             メンバー
           </button>
+          <button
+            className={`nav-btn ${page === 'help' ? 'active' : ''}`}
+            onClick={() => onNavigate('help')}
+          >
+            使い方
+          </button>
         </nav>
       </div>
     </header>
